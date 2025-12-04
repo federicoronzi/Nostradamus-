@@ -255,14 +255,12 @@ class NostradamusBot:
         """
         import random
         
-        # Genera valori mock
+        # Genera valori mock usando list comprehension per migliori performance
         base = 100
-        predictions = []
-        for i in range(periods):
-            trend = i * 0.5
-            noise = (random.random() - 0.5) * 10
-            value = base + trend + noise
-            predictions.append(value)
+        predictions = [
+            base + (i * 0.5) + ((random.random() - 0.5) * 10)
+            for i in range(periods)
+        ]
         
         # Calcola statistiche
         mean = sum(predictions) / len(predictions)

@@ -6,8 +6,10 @@
 import axios from 'axios';
 
 // Configure the base URL for your Nostradamus API
-// In production, this should be set via environment variables
-const API_BASE_URL = 'http://localhost:5000/api';
+// IMPORTANT: Configure this via environment variables in production
+// For local development: http://localhost:5000/api
+// For Android emulator: http://10.0.2.2:5000/api
+const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:5000/api';
 
 // Create axios instance with default config
 const apiClient = axios.create({

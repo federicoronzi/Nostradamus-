@@ -16,6 +16,7 @@ import {
   Alert,
 } from 'react-native';
 import NostradamusService from '../services/NostradamusService';
+import { ALERTS, PLACEHOLDERS, BUTTONS } from '../constants';
 
 const PredictionScreen = ({ navigation }) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,7 +31,7 @@ const PredictionScreen = ({ navigation }) => {
     const periodsNum = parseInt(periods, 10);
     
     if (isNaN(periodsNum) || periodsNum <= 0) {
-      Alert.alert('Errore', 'Inserisci un numero valido di periodi');
+      Alert.alert(ALERTS.ERROR_TITLE, ALERTS.INVALID_PERIODS);
       return;
     }
 
@@ -43,7 +44,7 @@ const PredictionScreen = ({ navigation }) => {
       setPrediction(result);
     } catch (err) {
       setError('Errore nella generazione della predizione');
-      Alert.alert('Errore', 'Si è verificato un errore durante la generazione della predizione');
+      Alert.alert(ALERTS.ERROR_TITLE, ALERTS.PREDICTION_ERROR);
       console.error('Error generating prediction:', err);
     } finally {
       setLoading(false);
@@ -63,7 +64,7 @@ const PredictionScreen = ({ navigation }) => {
             value={periods}
             onChangeText={setPeriods}
             keyboardType="numeric"
-            placeholder="Inserisci numero di periodi"
+            placeholder={PLACEHOLDERS.ENTER_PERIODS}
             placeholderTextColor={isDarkMode ? '#666' : '#999'}
           />
 
@@ -75,7 +76,7 @@ const PredictionScreen = ({ navigation }) => {
             {loading ? (
               <ActivityIndicator color="#fff" />
             ) : (
-              <Text style={styles.buttonText}>Genera Predizione</Text>
+              <Text style={styles.buttonText}>{BUTTONS.GENERATE_PREDICTION}</Text>
             )}
           </TouchableOpacity>
         </View>
