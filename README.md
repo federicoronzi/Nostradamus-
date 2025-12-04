@@ -91,6 +91,40 @@ predictor.plot_predictions()
 
 Per esempi più dettagliati, consulta la cartella `examples/` o i notebook Jupyter in `notebooks/`.
 
+### App Mobile
+
+Nostradamus include un'app mobile multipiattaforma sviluppata con React Native. Per maggiori informazioni:
+
+```bash
+cd mobile-app
+# Vedi mobile-app/README.md per istruzioni complete
+```
+
+Caratteristiche principali:
+- Interfaccia nativa per iOS e Android
+- Generazione predizioni in tempo reale
+- Visualizzazione statistiche e grafici
+- Supporto tema chiaro/scuro
+
+Consulta [mobile-app/README.md](mobile-app/README.md) per istruzioni dettagliate di installazione e utilizzo.
+
+### Bot Telegram
+
+Interagisci con Nostradamus direttamente da Telegram! Il bot offre:
+
+```bash
+cd telegram-bot
+# Vedi telegram-bot/README.md per istruzioni complete
+```
+
+Funzionalità:
+- Comandi interattivi (`/predict`, `/info`, `/models`)
+- Generazione predizioni via chat
+- Interfaccia conversazionale intuitiva
+- Deploy semplice su server o cloud
+
+Consulta [telegram-bot/README.md](telegram-bot/README.md) per configurazione e deploy.
+
 ## 📁 Struttura del Progetto
 
 ```
@@ -102,6 +136,8 @@ Nostradamus-/
 ├── examples/               # Esempi di utilizzo
 ├── notebooks/              # Jupyter notebooks
 ├── data/                   # Dati di esempio
+├── mobile-app/             # App mobile React Native
+├── telegram-bot/           # Bot Telegram
 ├── requirements.txt        # Dipendenze Python
 ├── setup.py                # Script di installazione
 ├── LICENSE                 # Licenza del progetto
