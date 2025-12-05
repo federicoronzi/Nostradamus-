@@ -1,0 +1,19 @@
+# Nostradamus Telegram Bot - Requirements
+# ========================================
+
+# Core Telegram bot library
+python-telegram-bot>=20.0
+
+# For async operations
+aiohttp>=3.8.0
+
+# Environment variables management
+python-dotenv>=1.0.0
+
+# Logging and utilities
+colorlog>=6.7.0
+
+# Optional: for enhanced functionality
+# requests>=2.31.0  # for API calls
+# pandas>=1.5.0     # for data processing
+# numpy>=1.24.0     # for numerical operations
