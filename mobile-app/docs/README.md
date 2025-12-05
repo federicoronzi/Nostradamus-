@@ -4,6 +4,21 @@ Benvenuto nella documentazione completa per lo sviluppo, build e distribuzione d
 
 ## 📚 Guide Disponibili
 
+### 0. [Getting Started](IOS_GETTING_STARTED.md) ⭐ **INIZIA QUI**
+**La tua prima app iOS**
+
+Guida completa passo-passo per principianti:
+- Setup completo ambiente di sviluppo
+- Installazione di tutti gli strumenti necessari
+- Prima esecuzione su simulatore
+- Prima esecuzione su dispositivo fisico
+- Verifica del setup completo
+- Workflow di sviluppo quotidiano
+
+**Ideale per**: Chi inizia da zero con lo sviluppo iOS o React Native.
+
+---
+
 ### 1. [Quick Start Guide](IOS_QUICK_START.md)
 **Per chi ha fretta**
 
@@ -65,6 +80,37 @@ Una checklist passo-passo per:
 
 ---
 
+### 5. [Guida Code Signing](IOS_CODE_SIGNING_GUIDE.md)
+**Configurazione certificati e firma**
+
+Guida completa alla code signing per iOS:
+- Comprensione dei concetti di code signing
+- Setup account Apple Developer (gratuito e a pagamento)
+- Code signing automatico (consigliato)
+- Code signing manuale (avanzato)
+- Troubleshooting problemi di firma
+- Best practices per team
+
+**Ideale per**: Configurare correttamente la firma del codice e risolvere problemi di certificati.
+
+---
+
+### 6. [Guida Troubleshooting](IOS_TROUBLESHOOTING_GUIDE.md)
+**Risoluzione problemi comuni**
+
+Guida completa per risolvere:
+- Problemi con pod install
+- Errori di build
+- Problemi di code signing
+- Errori runtime
+- Problemi di installazione su dispositivo
+- Problemi di performance
+- Problemi di rete e API
+
+**Ideale per**: Risolvere rapidamente qualsiasi problema durante lo sviluppo iOS.
+
+---
+
 ## 🔧 Script e Tool
 
 ### [check-environment.sh](../check-environment.sh)
@@ -80,6 +126,35 @@ Verifica:
 - Node.js e npm
 - CocoaPods
 - Configurazione progetto
+
+---
+
+### [ios-build.sh](../ios-build.sh)
+Script automatizzato per build e deployment iOS:
+
+```bash
+# Installa dipendenze
+./ios-build.sh install
+
+# Build per simulatore
+./ios-build.sh simulator
+
+# Build per dispositivo
+./ios-build.sh device
+
+# Crea archive e IPA
+./ios-build.sh archive
+
+# Run su simulatore
+./ios-build.sh run
+```
+
+Funzionalità:
+- Installazione automatica dipendenze (npm + pods)
+- Build per simulatore e dispositivo
+- Creazione archive e export IPA
+- Esecuzione su simulatore
+- Output colorato e chiaro
 
 ---
 
@@ -103,7 +178,15 @@ Supporta:
 
 ## 🗺️ Percorsi di Apprendimento
 
-### Per Principianti
+### Per Principianti Assoluti
+Se non hai mai sviluppato per iOS o usato React Native:
+
+1. **INIZIA QUI** → [Getting Started Guide](IOS_GETTING_STARTED.md) - Setup completo da zero (30-45 min)
+2. Esegui [check-environment.sh](../check-environment.sh) per verificare
+3. Personalizza con la [Guida Asset](IOS_ASSETS_GUIDE.md)
+4. Quando pronto per rilasciare → [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md)
+
+### Per Principianti con Esperienza
 Se è la tua prima app iOS:
 
 1. Leggi la [Guida Completa alla Build iOS](IOS_BUILD_GUIDE.md) - Sezione Prerequisiti
@@ -186,16 +269,26 @@ npm run ios -- --simulator="iPhone 14 Pro"
 ## 🆘 Risoluzione Problemi
 
 ### Problema con Build?
+→ [Guida Troubleshooting](IOS_TROUBLESHOOTING_GUIDE.md) - Sezione "Build Failures"  
 → [Guida Completa](IOS_BUILD_GUIDE.md) - Sezione "Risoluzione Problemi"
 
 ### Problema con Pods?
+→ [Guida Troubleshooting](IOS_TROUBLESHOOTING_GUIDE.md) - Sezione "Pod Install Issues"  
 → [Quick Start](IOS_QUICK_START.md) - Sezione "Risoluzione Problemi Comuni"
+
+### Problema con Code Signing?
+→ [Guida Code Signing](IOS_CODE_SIGNING_GUIDE.md) - Sezione "Troubleshooting"  
+→ [Guida Troubleshooting](IOS_TROUBLESHOOTING_GUIDE.md) - Sezione "Code Signing Issues"
 
 ### Problema con Asset?
 → [Guida Asset](IOS_ASSETS_GUIDE.md) - Varie sezioni specifiche
 
+### Problema Runtime?
+→ [Guida Troubleshooting](IOS_TROUBLESHOOTING_GUIDE.md) - Sezione "Runtime Errors"
+
 ### Non sai da dove iniziare?
-→ Esegui `./check-environment.sh` per identificare cosa manca
+→ Esegui `./check-environment.sh` per identificare cosa manca  
+→ Consulta la [Guida Troubleshooting Completa](IOS_TROUBLESHOOTING_GUIDE.md)
 
 ---
 

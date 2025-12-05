@@ -154,7 +154,17 @@ Assicurati di avere un emulatore Android in esecuzione o un dispositivo collegat
 
 Per istruzioni complete e dettagliate sulla compilazione, generazione IPA, e distribuzione iOS (TestFlight e App Store), consulta la **[Guida Completa alla Build iOS](docs/IOS_BUILD_GUIDE.md)**.
 
-**Quick start**:
+**Automated build script**:
+
+```bash
+# Installa tutte le dipendenze (prima volta)
+./ios-build.sh install
+
+# Crea archive e genera IPA
+./ios-build.sh archive
+```
+
+**Quick start con Xcode**:
 
 1. Apri il progetto in Xcode:
 ```bash
@@ -167,6 +177,14 @@ open ios/NostradamusMobile.xcworkspace
 5. Segui il processo di distribuzione di Xcode
 
 **Nota**: Usa sempre il file `.xcworkspace`, **NON** `.xcodeproj`!
+
+**Documentazione completa iOS**:
+- [Quick Start Guide](docs/IOS_QUICK_START.md) - Setup rapido in 5 minuti
+- [Guida Completa Build](docs/IOS_BUILD_GUIDE.md) - Documentazione dettagliata
+- [Code Signing Guide](docs/IOS_CODE_SIGNING_GUIDE.md) - Configurazione certificati
+- [Troubleshooting Guide](docs/IOS_TROUBLESHOOTING_GUIDE.md) - Risoluzione problemi
+- [Deployment Checklist](docs/IOS_DEPLOYMENT_CHECKLIST.md) - Checklist pre-rilascio
+
 
 ### Build Android
 
