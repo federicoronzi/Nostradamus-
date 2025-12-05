@@ -6,6 +6,15 @@ App mobile cross-platform per il progetto Nostradamus, sviluppata con React Nati
 
 L'app mobile Nostradamus porta le funzionalità di previsione e analisi predittiva direttamente sul tuo dispositivo mobile. Supporta sia iOS che Android e offre un'interfaccia intuitiva per interagire con il backend di Nostradamus.
 
+## 📚 Documentazione iOS
+
+Per istruzioni complete su build, testing e distribuzione iOS, consulta la **[Documentazione iOS](docs/README.md)** che include:
+
+- [Quick Start Guide](docs/IOS_QUICK_START.md) - Inizia in 5 minuti
+- [Guida Completa alla Build iOS](docs/IOS_BUILD_GUIDE.md) - Documentazione dettagliata
+- [Guida Configurazione Asset](docs/IOS_ASSETS_GUIDE.md) - Icone e splash screen
+- [Checklist Deployment](docs/IOS_DEPLOYMENT_CHECKLIST.md) - Lista controllo pre-rilascio
+
 ## ✨ Funzionalità
 
 - **Interfaccia utente moderna**: Design pulito e responsive con supporto per modalità chiara/scura
