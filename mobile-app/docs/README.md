@@ -49,7 +49,37 @@ Come configurare e personalizzare:
 
 ---
 
-### 4. [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md)
+### 4. [macOS Setup Guide](MACOS_SETUP.md)
+**Setup completo su macOS**
+
+Guida dettagliata per completare il setup iOS:
+- Installazione automatizzata con script
+- Setup manuale passo-passo
+- Configurazione code signing
+- Build e test su simulator e device
+- Generazione IPA per distribuzione
+- Troubleshooting completo
+
+**Ideale per**: Completare il setup iniziale del progetto iOS su macOS.
+
+---
+
+### 5. [Validation Checklist](IOS_VALIDATION_CHECKLIST.md)
+**Verifica completa del setup**
+
+Checklist dettagliata per validare:
+- Installazione prerequisiti
+- Setup CocoaPods
+- Configurazione code signing
+- Build su simulator e device
+- Generazione IPA
+- Documentazione
+
+**Ideale per**: Verificare che tutto sia stato configurato correttamente.
+
+---
+
+### 6. [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md)
 **Lista di controllo completa**
 
 Una checklist passo-passo per:
@@ -66,6 +96,49 @@ Una checklist passo-passo per:
 ---
 
 ## 🔧 Script e Tool
+
+### [setup-ios.sh](../ios/setup-ios.sh)
+Script automatizzato per setup completo iOS su macOS:
+
+```bash
+cd ios
+./setup-ios.sh
+```
+
+Esegue:
+- Verifica prerequisiti (Xcode, Node.js, CocoaPods)
+- Installazione CocoaPods se necessario
+- Esecuzione `pod install`
+- Creazione workspace
+- Lista simulatori disponibili
+
+---
+
+### [build-ios.sh](../ios/build-ios.sh)
+Script per build e test dell'app:
+
+```bash
+cd ios
+./build-ios.sh                              # Debug build per simulator
+./build-ios.sh --release                     # Release build
+./build-ios.sh --simulator "iPhone 14 Pro"  # Simulator specifico
+./build-ios.sh --device                      # Build per dispositivo
+```
+
+---
+
+### [generate-ipa.sh](../ios/generate-ipa.sh)
+Script per generazione IPA per distribuzione:
+
+```bash
+cd ios
+./generate-ipa.sh --development   # Per testing
+./generate-ipa.sh --ad-hoc       # Per dispositivi registrati
+./generate-ipa.sh --app-store    # Per App Store/TestFlight
+./generate-ipa.sh --enterprise   # Per distribuzione enterprise
+```
+
+---
 
 ### [check-environment.sh](../check-environment.sh)
 Script bash per verificare automaticamente che tutti i prerequisiti siano installati:
@@ -108,16 +181,18 @@ Se è la tua prima app iOS:
 
 1. Leggi la [Guida Completa alla Build iOS](IOS_BUILD_GUIDE.md) - Sezione Prerequisiti
 2. Esegui [check-environment.sh](../check-environment.sh)
-3. Segui la [Quick Start Guide](IOS_QUICK_START.md) per il primo test
-4. Personalizza con la [Guida Asset](IOS_ASSETS_GUIDE.md)
-5. Prima del rilascio, usa la [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md)
+3. Segui la [macOS Setup Guide](MACOS_SETUP.md) per il setup completo
+4. Usa la [Validation Checklist](IOS_VALIDATION_CHECKLIST.md) per verificare
+5. Personalizza con la [Guida Asset](IOS_ASSETS_GUIDE.md)
+6. Prima del rilascio, usa la [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md)
 
 ### Per Sviluppatori Esperti
 Se hai già esperienza con React Native e iOS:
 
 1. [Quick Start Guide](IOS_QUICK_START.md) - Per iniziare rapidamente
-2. [Guida Completa](IOS_BUILD_GUIDE.md) - Sezioni specifiche quando necessario
-3. [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md) - Prima del rilascio
+2. [macOS Setup Guide](MACOS_SETUP.md) - Per setup automatizzato
+3. [Guida Completa](IOS_BUILD_GUIDE.md) - Sezioni specifiche quando necessario
+4. [Checklist Deployment](IOS_DEPLOYMENT_CHECKLIST.md) - Prima del rilascio
 
 ### Per Designer
 Se ti occupi principalmente di UI/UX:

@@ -8,8 +8,19 @@ L'app mobile Nostradamus porta le funzionalità di previsione e analisi preditti
 
 ## 📚 Documentazione iOS
 
+**⚠️ IMPORTANTE: [Stato Completamento iOS](IOS_COMPLETION_STATUS.md)**
+
+Il progetto iOS è stato completamente configurato ma alcuni task richiedono macOS.
+Consulta [IOS_COMPLETION_STATUS.md](IOS_COMPLETION_STATUS.md) per:
+- Stato attuale e task completati
+- Task che richiedono macOS (pod install, code signing, build, IPA)
+- Istruzioni passo-passo per completare il setup su macOS
+
 Per istruzioni complete su build, testing e distribuzione iOS, consulta la **[Documentazione iOS](docs/README.md)** che include:
 
+- [**Stato Completamento iOS**](IOS_COMPLETION_STATUS.md) - Task completati e prossimi passi su macOS
+- [**macOS Setup Guide**](docs/MACOS_SETUP.md) - Setup completo e automatizzato
+- [**Validation Checklist**](docs/IOS_VALIDATION_CHECKLIST.md) - Verifica setup completo
 - [Quick Start Guide](docs/IOS_QUICK_START.md) - Inizia in 5 minuti
 - [Guida Completa alla Build iOS](docs/IOS_BUILD_GUIDE.md) - Documentazione dettagliata
 - [Guida Configurazione Asset](docs/IOS_ASSETS_GUIDE.md) - Icone e splash screen
