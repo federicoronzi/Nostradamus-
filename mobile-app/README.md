@@ -56,13 +56,29 @@ o con yarn:
 yarn install
 ```
 
-### 3. Installazione Specifica per iOS
+### 3. Verifica l'Ambiente (Opzionale ma Consigliato)
+
+Prima di procedere, verifica che tutti i prerequisiti siano installati:
+
+```bash
+./check-environment.sh
+```
+
+Questo script verifica:
+- macOS e Xcode
+- Node.js e npm
+- CocoaPods
+- Configurazione del progetto
+
+### 4. Installazione Specifica per iOS
 
 ```bash
 cd ios
 pod install
 cd ..
 ```
+
+**Importante**: Questo passaggio deve essere eseguito su macOS con CocoaPods installato.
 
 ## 🔧 Configurazione
 
@@ -127,6 +143,10 @@ Assicurati di avere un emulatore Android in esecuzione o un dispositivo collegat
 
 ### Build iOS
 
+Per istruzioni complete e dettagliate sulla compilazione, generazione IPA, e distribuzione iOS (TestFlight e App Store), consulta la **[Guida Completa alla Build iOS](docs/IOS_BUILD_GUIDE.md)**.
+
+**Quick start**:
+
 1. Apri il progetto in Xcode:
 ```bash
 open ios/NostradamusMobile.xcworkspace
@@ -136,6 +156,8 @@ open ios/NostradamusMobile.xcworkspace
 3. Configura il team di sviluppo nelle impostazioni di signing
 4. Clicca su Product > Archive
 5. Segui il processo di distribuzione di Xcode
+
+**Nota**: Usa sempre il file `.xcworkspace`, **NON** `.xcodeproj`!
 
 ### Build Android
 

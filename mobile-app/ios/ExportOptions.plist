@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 
+    Metodo di distribuzione:
+    - app-store: Per distribuzione su App Store o TestFlight
+    - ad-hoc: Per distribuzione a dispositivi registrati specifici
+    - development: Per testing su dispositivi di sviluppo
+    - enterprise: Per distribuzione enterprise (richiede account enterprise)
+    -->
+    <key>method</key>
+    <string>ad-hoc</string>
+    
+    <!-- 
+    Team ID - Sostituisci con il tuo Team ID
+    Puoi trovarlo in:
+    - Xcode: Signing & Capabilities > Team
+    - Apple Developer Portal: Membership Details
+    -->
+    <key>teamID</key>
+    <string>YOUR_TEAM_ID</string>
+    
+    <!-- 
+    Carica i simboli di debug per crash reporting
+    Consigliato: true
+    -->
+    <key>uploadSymbols</key>
+    <true/>
+    
+    <!-- 
+    Compila bitcode
+    Per React Native 0.72.0, impostare a false
+    -->
+    <key>compileBitcode</key>
+    <false/>
+    
+    <!-- 
+    Signing Style
+    - automatic: Gestione automatica dei certificati (consigliato)
+    - manual: Gestione manuale dei certificati
+    -->
+    <key>signingStyle</key>
+    <string>automatic</string>
+    
+    <!-- 
+    Provisioning Profiles (solo per manual signing)
+    Uncomment e configura se usi manual signing
+    -->
+    <!--
+    <key>provisioningProfiles</key>
+    <dict>
+        <key>com.federicoronzi.nostradamus.NostradamusMobile</key>
+        <string>YOUR_PROVISIONING_PROFILE_NAME</string>
+    </dict>
+    -->
+    
+    <!-- 
+    Signing Certificate (solo per manual signing)
+    Uncomment se usi manual signing
+    -->
+    <!--
+    <key>signingCertificate</key>
+    <string>Apple Distribution</string>
+    -->
+    
+    <!-- 
+    Thinning (ottimizzazione per dispositivi specifici)
+    - <none>: Nessun thinning
+    - <thin-for-all-variants>: Ottimizza per tutti i dispositivi
+    Per ad-hoc, usa <none>
+    -->
+    <key>thinning</key>
+    <string>&lt;none&gt;</string>
+</dict>
+</plist>
