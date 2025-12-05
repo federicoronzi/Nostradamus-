@@ -18,7 +18,9 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+*.xcarchive
 ios/.xcode.env.local
+ios/*.xcworkspace/xcuserdata/
 
 # Android
 *.apk
