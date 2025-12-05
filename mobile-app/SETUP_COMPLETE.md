@@ -29,26 +29,45 @@ L'app mobile Nostradamus è ora completamente configurata per lo sviluppo e il d
 - ✅ `.xcode.env` - Variabili ambiente Xcode
 - ✅ `ExportOptions.plist` - Template per export IPA
 
-### 4. Documentazione Completa
+### 4. Documentazione Completa (AGGIORNATA)
+- ✅ **Getting Started Guide** - Guida completa per principianti (11,725 caratteri) 🆕
+- ✅ **Code Signing Guide** - Configurazione certificati (12,432 caratteri) 🆕
+- ✅ **Troubleshooting Guide** - Risoluzione problemi (14,601 caratteri) 🆕
 - ✅ **Guida Completa Build iOS** (24 pagine) - Tutto da prerequisiti a distribuzione
 - ✅ **Quick Start Guide** - Setup veloce in 5 minuti
 - ✅ **Guida Asset** - Come configurare icone e splash screen
 - ✅ **Checklist Deployment** - Lista controllo pre-rilascio completa
-- ✅ **README Documentazione** - Indice con percorsi di apprendimento
+- ✅ **README Documentazione** - Indice con percorsi di apprendimento aggiornato
 
-### 5. Automazione e Tool
+### 5. Automazione e Tool (AGGIORNATI)
 - ✅ Script `check-environment.sh` - Verifica automatica prerequisiti
-- ✅ `.gitignore` - Esclude file di build e dipendenze
+- ✅ Script `ios-build.sh` - Automazione build completa 🆕
+  - Installazione dipendenze automatica
+  - Build per simulator e device
+  - Creazione archive e export IPA
+  - Esecuzione su simulator
+  - Output colorato e gestione errori
+- ✅ `.gitignore` - Esclude file di build e dipendenze (migliorato)
 - ✅ Template configurazione per diverse modalità di distribuzione
 
 ### 6. Aggiornamenti README
 - ✅ README principale aggiornato con link alla documentazione iOS
-- ✅ Sezione build iOS migliorata
+- ✅ Sezione build iOS migliorata con riferimenti agli script
 - ✅ Riferimenti alla nuova documentazione
+- ✅ Aggiunta sezione automazione
+
+### 7. Status e Riepilogo
+- ✅ **IOS_PROJECT_STATUS.md** - Documento di stato completo 🆕
+  - Riepilogo completo di tutto
+  - Checklist per completamento su macOS
+  - Percorsi di apprendimento
+  - Criteri di successo
 
 ## 📋 Prossimi Passi
 
 ### Immediati (Da Fare su macOS)
+
+**INIZIA QUI** → Segui la guida completa: [Getting Started Guide](docs/IOS_GETTING_STARTED.md)
 
 1. **Installare CocoaPods Dipendenze**
    ```bash
@@ -57,12 +76,23 @@ L'app mobile Nostradamus è ora completamente configurata per lo sviluppo e il d
    cd ..
    ```
    Questo genererà `NostradamusMobile.xcworkspace` e installerà tutte le dipendenze native.
+   
+   **OPPURE** usa lo script automatico:
+   ```bash
+   cd mobile-app
+   ./ios-build.sh install
+   ```
 
 2. **Primo Test su Simulatore**
    ```bash
    npm run ios
    ```
    Verifica che l'app si compili e avvii correttamente.
+   
+   **OPPURE** usa lo script:
+   ```bash
+   ./ios-build.sh run
+   ```
 
 3. **Configurare Signing in Xcode**
    ```bash
@@ -71,6 +101,8 @@ L'app mobile Nostradamus è ora completamente configurata per lo sviluppo e il d
    - Seleziona il progetto > Target > Signing & Capabilities
    - Abilita "Automatically manage signing"
    - Seleziona il tuo Team
+   
+   **PER AIUTO**: Leggi [Code Signing Guide](docs/IOS_CODE_SIGNING_GUIDE.md)
 
 ### Per Personalizzazione
 
@@ -108,14 +140,20 @@ L'app mobile Nostradamus è ora completamente configurata per lo sviluppo e il d
 
 ## 📚 Dove Trovare Informazioni
 
+### Per Iniziare da Zero (CONSIGLIATO)
+→ **[Getting Started Guide](docs/IOS_GETTING_STARTED.md)** - Guida completa passo-passo 🆕
+
 ### Per Iniziare Velocemente
 → [Quick Start Guide](docs/IOS_QUICK_START.md)
 
-### Per Capire Tutto
+### Per Capire Tutto in Dettaglio
 → [Guida Completa alla Build iOS](docs/IOS_BUILD_GUIDE.md)
 
-### Per Problemi
-→ [Guida Completa](docs/IOS_BUILD_GUIDE.md) - Sezione "Risoluzione Problemi"
+### Per Configurare i Certificati
+→ **[Code Signing Guide](docs/IOS_CODE_SIGNING_GUIDE.md)** - Configurazione firma 🆕
+
+### Per Risolvere Problemi
+→ **[Troubleshooting Guide](docs/IOS_TROUBLESHOOTING_GUIDE.md)** - Risoluzione problemi completa 🆕
 
 ### Prima del Rilascio
 → [Checklist Deployment](docs/IOS_DEPLOYMENT_CHECKLIST.md)
@@ -125,6 +163,9 @@ L'app mobile Nostradamus è ora completamente configurata per lo sviluppo e il d
 
 ### Panoramica Completa
 → [Documentazione iOS](docs/README.md)
+
+### Stato e Riepilogo Completo
+→ **[IOS_PROJECT_STATUS.md](IOS_PROJECT_STATUS.md)** - Documento di stato 🆕
 
 ## ⚠️ Note Importanti
 
@@ -200,10 +241,12 @@ npm start -- --reset-cache
 | iOS Project Structure | ✅ Completo | Pronto per sviluppo |
 | Configurazione Xcode | ✅ Completo | Bundle ID e display name configurati |
 | Dipendenze npm | ✅ Completo | Versioni compatibili installate |
-| CocoaPods Setup | ⚠️ Richiede macOS | Eseguire `pod install` su macOS |
-| Documentazione | ✅ Completo | Guide complete disponibili |
+| CocoaPods Setup | ⚠️ Richiede macOS | Eseguire `pod install` su macOS o `./ios-build.sh install` |
+| Documentazione Completa | ✅ Completo | 7 guide per 70,000+ caratteri |
+| Script Automazione | ✅ Completo | ios-build.sh e check-environment.sh |
 | Asset Predefiniti | ✅ Completo | Icone e splash screen base |
-| Script Automazione | ✅ Completo | Environment check disponibile |
+| Code Signing Guide | ✅ Completo | Guida completa configurazione certificati |
+| Troubleshooting Guide | ✅ Completo | Risoluzione di tutti i problemi comuni |
 
 ## 🚀 Ready to Build!
 
